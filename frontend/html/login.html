@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вход</title>
+  <link rel="stylesheet" href="/css/auth.css">
+  <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Вход</h2>
+
+    <form id="loginForm">
+      <!-- Имя или телефон -->
+      <div class="form-group">
+        <input id="login" name="login" type="text" required placeholder=" " minlength="2" />
+        <label for="login">Имя или номер телефона</label>
+        <i class="fa-solid fa-user"></i>
+      </div>
+
+      <!-- Пароль -->
+      <div class="form-group">
+        <input id="password" name="password" type="password" required placeholder=" " minlength="6" />
+        <label for="password">Пароль</label>
+        <i id="togglePassword" class="fa-solid fa-eye" style="cursor: pointer;"></i>
+      </div>
+
+      <button id="btn" type="submit">Войти</button>
+
+      <p>Нет аккаунта? <a class="link" href="register.html">Зарегистрироваться</a></p>
+    </form>
+  </div>
+
+  <script>
+    // Показать/скрыть пароль
+    const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function () {
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      this.classList.toggle('fa-eye');
+      this.classList.toggle('fa-eye-slash');
+  
+    });
+    
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const username = document.getElementById('login').value;
+    const password = document.getElementById('password').value;
+    
+    fetch('/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        // Закрываем модальное окно, если оно открыто
+        const loginModal = document.getElementById('loginModal');
+        if (loginModal) loginModal.style.display = 'none';
+        
+        // Обновляем шапку
+        updateHeaderForLoggedInUser(data.username, data.is_admin);
+        
+        // Перенаправляем на главную
+        window.location.href = '/';
+      } else {
+        alert('Ошибка: ' + data.message);
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Произошла ошибка при входе');
+    });
+  });
+  
+  // Добавляем функцию в глобальную область видимости
+  window.updateHeaderForLoggedInUser = function(username, isAdmin) {
+    // ... (код из script.js) ...
+  };
+
+  </script>
+</body>
+</html>

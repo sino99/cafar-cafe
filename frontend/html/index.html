@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафе SaFar | Пенджикент</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">SaFar</a>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Главная</a></li>
+                    <li><a href="#about" class="nav-link">О нас</a></li>
+                    <li><a href="#menu" class="nav-link">Меню</a></li>
+                    <li><a href="#special" class="nav-link">Доставка и оплата</a></li>
+                    <li><a href="#testimonials" class="nav-link">Отзывы</a></li>
+                    <li><a href="#contact" class="nav-link">Контакты</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <!-- Поиск -->
+                    <div class="search-container">
+                        <div class="search-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input type="text" id="searchInput" placeholder="Поиск блюд...">
+                        <div id="searchResults" class="search-results"></div>
+                    </div>
+                    
+                    <!-- Корзина -->
+                    <div class="cart-icon-container">
+                        <a href="#" class="nav-icon cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Кнопки входа -->
+                    <a href="/login.html" class="btn btn-login">Вход</a>
+                    <a href="/register.html" class="btn btn-register">Регистрация</a>
+                </div>
+                <div class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-subtitle">Вкусный фастфуд</p>
+                <h1 class="hero-title">
+                    Бургеры и <span>вкусные</span> блюда
+                </h1>
+                <p class="hero-description">
+                    Кафе SaFar предлагает качественный фастфуд с местными ингредиентами и быстрой доставкой в Пенджикенте.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-secondary">Посмотреть меню</a>
+                    <a href="#" class="btn hero-btn-outline open-cart">Заказать онлайн</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="section-subtitle">Наша история</p>
+                    <h2 class="section-title">Кафе SaFar</h2>
+                    <p class="about-text">
+                        Кафе SaFar в Пенджикенте – это место, где фастфуд превращается в искусство. Мы используем свежие местные ингредиенты, чтобы создавать вкусные и качественные блюда.
+                    </p>
+                    <p class="about-text">
+                        Мы гордимся быстрой доставкой и вниманием к каждому заказу. От сочных бургеров до хрустящих стрипсов – всё готовится с душой.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h4 class="about-feature-title">Свежие ингредиенты</h4>
+                                <p class="about-feature-text">
+                                    Используем только местные продукты высокого качества.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div>
+                                <h4 class="about-feature-title">Уникальные рецепты</h4>
+                                <p class="about-feature-text">
+                                    Вкусные блюда, созданные с заботой.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h4 class="about-feature-title">Быстрая доставка</h4>
+                                <p class="about-feature-text">
+                                    Доставка в пределах Пенджикента от 50 TJS бесплатно.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="about-feature-title">С любовью</h4>
+                                <p class="about-feature-text">
+                                    Каждое блюдо приготовлено с заботой.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-img"></div>
+                    <div class="about-badge">С 2018 года</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Меню -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="menu-header">
+                <p class="menu-subtitle">Наше меню</p>
+                <h2 class="menu-title">Вкусный фастфуд</h2>
+                <p class="menu-description">
+                    Ознакомьтесь с нашим меню: от сочных бургеров до хрустящих стрипсов и прохладительных напитков.
+                </p>
+            </div>
+            <div class="menu-tabs">
+                <div class="menu-tab active">Все</div>
+                <div class="menu-tab">Комбо</div>
+                <div class="menu-tab">Бургеры</div>
+                <div class="menu-tab">Хот-доги</div>
+                <div class="menu-tab">Стрипсы</div>
+                <div class="menu-tab">Соусы</div>
+                <div class="menu-tab">Напитки</div>
+                <div class="menu-tab">Другое</div>
+            </div>
+        <div class="menu-grid">
+          <!-- Комбо 1 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/1.jpg')"></div>
+            <div class="menu-item-badge">Хит продаж</div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Комбо</p>
+              <h3 class="menu-item-name">Комбо Бургер 5 в 1</h3>
+              <p class="menu-item-description">
+                1 Чикенбургер, 125гр картошка фри, 250гр микс, 1шт соус на выбор, 1 кола или Фанта 0.5.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">52 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Комбо 2 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('/images/2.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Комбо</p>
+              <h3 class="menu-item-name">Комбо 3 в 1</h3>
+              <p class="menu-item-description">
+                1 Чикенбургер, 125гр картошка фри, 1 Кола или Фанта 0.5.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">27 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Комбо 3 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/3.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Комбо</p>
+              <h3 class="menu-item-name">Комбо X 3 в 1</h3>
+              <p class="menu-item-description">
+                1 Гамбургер говяжий, 125гр картошка фри, 1 кола или Фанта 0.5.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">33 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Комбо 4 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/4.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Комбо</p>
+              <h3 class="menu-item-name">Комбо Асия</h3>
+              <p class="menu-item-description">
+                125гр байтси, 70гр картошка фри, 2шт жареная сосиска, 1шт сок 200мл, 1шт соус на выбор.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">25 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Комбо 5 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/5.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Комбо</p>
+              <h3 class="menu-item-name">Комбо 5 в 1</h3>
+              <p class="menu-item-description">
+                1 шт булочка с кунжутом, 250гр микс порция, 125гр картошка фри, 1шт соус на выбор, 1 кола или Фанта 0.5.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">37 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Комбо 6 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/6.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Комбо</p>
+              <h3 class="menu-item-name">Френд Бокс</h3>
+              <p class="menu-item-description">
+                1 Гамбургер говяжий, 1 Чикенбургер, 125гр картошка фри, 250гр микс порция, 2 шт соуса на выбор, 1 Rc кола 1л.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">95 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Комбо 7 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/7.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Комбо</p>
+              <h3 class="menu-item-name">Баскет Комбо 2X</h3>
+              <p class="menu-item-description">
+                2 по 250гр микс порция, 2 по 125гр картошка фри, 2 шт соус на выбор, 2 кола или Фанта 0.5.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">70 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Гарниры 1 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/8.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Гарниры</p>
+              <h3 class="menu-item-name">Фри с сосиской и соусом</h3>
+              <p class="menu-item-description">
+                150гр Картофель фри, 2шт сосиска и 2 вида соуса на выбор.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">15 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Стрипсы 1 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/9.jpg')"></div>
+            <div class="menu-item-badge">Популярное</div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Стрипсы</p>
+              <h3 class="menu-item-name">Баскет ножки 1КГ</h3>
+              <p class="menu-item-description">
+                Маленькие куриные ножки в хрустящей панировке. Средней остроты.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">85 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Стрипсы 2 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/10.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Стрипсы</p>
+              <h3 class="menu-item-name">Ножки 250ГР</h3>
+              <p class="menu-item-description">
+                Сочные куриные ножки в порционной упаковке. Средней остроты.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">22 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Гарниры 2 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/11.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Гарниры</p>
+              <h3 class="menu-item-name">Фри с тушеным мясом</h3>
+              <p class="menu-item-description">
+                150гр Картофель фри, 70гр тушеного мяса и 2 вида соуса на выбор.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">18 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Гарниры 3 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/12.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Гарниры</p>
+              <h3 class="menu-item-name">Фри с соусом</h3>
+              <p class="menu-item-description">
+                150гр картофель фри, 2 вида соуса на выбор.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">10 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Гарниры 4 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/13.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Гарниры</p>
+              <h3 class="menu-item-name">Картофель по-деревенски</h3>
+              <p class="menu-item-description">
+                125гр Картофель по-деревенски.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">8 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Гарниры 5 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/14.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Гарниры</p>
+              <h3 class="menu-item-name">Картошка Фри</h3>
+              <p class="menu-item-description">
+                125гр порция картофеля фри.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">8 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Стрипсы 3 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/71.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Стрипсы</p>
+              <h3 class="menu-item-name">Баскет крылышки 1кг</h3>
+              <p class="menu-item-description">
+                Куриные крылышки в хрустящей панировке. Средней остроты.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">85 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Стрипсы 4 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/72.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Стрипсы</p>
+              <h3 class="menu-item-name">Стрипсы 250гр</h3>
+              <p class="menu-item-description">
+                Куриные стрипсы в порционной упаковке.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">22 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Стрипсы 5 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/73.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Стрипсы</p>
+              <h3 class="menu-item-name">Баскет байтсы 1кг</h3>
+              <p class="menu-item-description">
+                Большая порция хрустящих байтсов. Не острая.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">85 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Стрипсы 6 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/74.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Стрипсы</p>
+              <h3 class="menu-item-name">Наггетсы 250гр</h3>
+              <p class="menu-item-description">
+                Куриные наггетсы в порционной упаковке. Не острая.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">22 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Стрипсы 7 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/75.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Стрипсы</p>
+              <h3 class="menu-item-name">Баскет стрипсы 1кг</h3>
+              <p class="menu-item-description">
+                Большая порция куриных стрипсов.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">85 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Стрипсы 8 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/76.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Стрипсы</p>
+              <h3 class="menu-item-name">Баскет наггетсы 1кг</h3>
+              <p class="menu-item-description">
+                Большая порция куриных наггетсов. Не острая.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">85 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Стрипсы 9 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/77.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Стрипсы</p>
+              <h3 class="menu-item-name">Крылышки 250гр</h3>
+              <p class="menu-item-description">
+                Куриные крылышки в порционной упаковке.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">22 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Стрипсы 10 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/78.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Стрипсы</p>
+              <h3 class="menu-item-name">Микс 250гр</h3>
+              <p class="menu-item-description">
+                Микс порция, состоит из куриных ножек, крылышек, стрипсов и сочных байтсов.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">22 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Стрипсы 11 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/79.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Стрипсы</p>
+              <h3 class="menu-item-name">Баскет микс 1кг</h3>
+              <p class="menu-item-description">
+                Большая порция микса из куриных ножек, крылышек, стрипсов и байтсов.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">85 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Бургеры 1 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/16.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Бургеры</p>
+              <h3 class="menu-item-name">Двойной Чизбургер</h3>
+              <p class="menu-item-description">
+                Сочный бургер с двойной порцией говяжьих котлет и двумя сырами.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">38 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Бургеры 2 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/17.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Бургеры</p>
+              <h3 class="menu-item-name">Бургер в лаваше</h3>
+              <p class="menu-item-description">
+                Необычный бургер, завернутый в лаваш с говяжьей котлетой, сыром и чипсами Lay’s.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">28 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Бургеры 3 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/18.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Бургеры</p>
+              <h3 class="menu-item-name">ДаблБургер</h3>
+              <p class="menu-item-description">
+                Бургер с двумя котлетами и порцией сыра.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">35 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Бургеры 4 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/19.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Бургеры</p>
+              <h3 class="menu-item-name">Black Бургер</h3>
+              <p class="menu-item-description">
+                Бургер с черной булочкой, большим и сочным котлетой и сыром.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">30 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Бургеры 5 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/20.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Бургеры</p>
+              <h3 class="menu-item-name">ЧикенБургер</h3>
+              <p class="menu-item-description">
+                Бургер с куриными стрипсами.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">17 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Бургеры 6 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/21.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Бургеры</p>
+              <h3 class="menu-item-name">Чикен Чиз</h3>
+              <p class="menu-item-description">
+                Бургер с куриной котлетой и сыром.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">22 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Бургеры 7 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/22.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Бургеры</p>
+              <h3 class="menu-item-name">Биф & Чикен</h3>
+              <p class="menu-item-description">
+                Бургер с говяжьей и куриной котлетами и сыром.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">30 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Бургеры 8 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/24.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Бургеры</p>
+              <h3 class="menu-item-name">Цезарь Бургер</h3>
+              <p class="menu-item-description">
+                Бургер с курицей и соусом Цезарь.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">25 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Бургеры 9 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/25.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Бургеры</p>
+              <h3 class="menu-item-name">Чизбургер</h3>
+              <p class="menu-item-description">
+                Классический бургер с сыром.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">28 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Бургеры 10 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/26.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Бургеры</p>
+              <h3 class="menu-item-name">Гамбургер</h3>
+              <p class="menu-item-description">
+                Классический гамбургер с сочной котлетой.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">22 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Хот-доги 1 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/28.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Хот-доги</p>
+              <h3 class="menu-item-name">Хот-дог SaFar</h3>
+              <p class="menu-item-description">
+                Хот-дог с сочной сосиской и соусом.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">15 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Хот-доги 2 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/30.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Хот-доги</p>
+              <h3 class="menu-item-name">Твистер сырный</h3>
+              <p class="menu-item-description">
+                Твистер с сыром и курицей.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">20 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Хот-доги 3 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/31.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Хот-доги</p>
+              <h3 class="menu-item-name">Хот-дог Лонгер</h3>
+              <p class="menu-item-description">
+                Длинный хот-дог с сочной сосиской.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">12 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Хот-доги 4 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/32.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Хот-доги</p>
+              <h3 class="menu-item-name">Твистер Шаверма</h3>
+              <p class="menu-item-description">
+                Твистер с начинкой из шавермы.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">17 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Хот-доги 5 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/33.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Хот-доги</p>
+              <h3 class="menu-item-name">Хот-дог гриль</h3>
+              <p class="menu-item-description">
+                Хот-дог с сосиской, приготовленной на гриле.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">12 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Хот-доги 6 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/34.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Хот-доги</p>
+              <h3 class="menu-item-name">Хот-дог стандарт</h3>
+              <p class="menu-item-description">
+                Классический хот-дог.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">10 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Хот-доги 7 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/35.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Хот-доги</p>
+              <h3 class="menu-item-name">Хот-дог BBQ</h3>
+              <p class="menu-item-description">
+                Хот-дог с соусом барбекю.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">12 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Хот-доги 8 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/36.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Хот-доги</p>
+              <h3 class="menu-item-name">Твистер</h3>
+              <p class="menu-item-description">
+                Классический твистер с курицей.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">17 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Хот-доги 9 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/36.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Хот-доги</p>
+              <h3 class="menu-item-name">Твистер острый</h3>
+              <p class="menu-item-description">
+                Острый твистер с курицей.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">17 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Хот-доги 10 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/38.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Хот-доги</p>
+              <h3 class="menu-item-name">Твистер шаверма сырный</h3>
+              <p class="menu-item-description">
+                Твистер с шавермой и сыром.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">20 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Напитки 1 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/45.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Напитки</p>
+              <h3 class="menu-item-name">Gorilla 0.33 мл</h3>
+              <p class="menu-item-description">
+                Энергетический напиток.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">10 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Напитки 2 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/46.webp')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Напитки</p>
+              <h3 class="menu-item-name">Adrenaline 0.25 мл</h3>
+              <p class="menu-item-description">
+                Энергетический напиток.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">12 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Напитки 3 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/47.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Напитки</p>
+              <h3 class="menu-item-name">RC кола 1 л</h3>
+              <p class="menu-item-description">
+                Газированный напиток.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">11 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Напитки 4 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/48.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Напитки</p>
+              <h3 class="menu-item-name">Pepsi 1 л</h3>
+              <p class="menu-item-description">
+                Газированный напиток.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">10 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Напитки 5 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/49.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Напитки</p>
+              <h3 class="menu-item-name">Мохито 0.5 л</h3>
+              <p class="menu-item-description">
+                Освежающий напиток с различными вкусами.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">6 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Напитки 6 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/50.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Напитки</p>
+              <h3 class="menu-item-name">Bon aqua 0.5 л</h3>
+              <p class="menu-item-description">
+                Питьевая вода.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">3 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Напитки 7 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/51.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Напитки</p>
+              <h3 class="menu-item-name">Чай фюсти 0.5 л</h3>
+              <p class="menu-item-description">
+                Холодный чай.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">6 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Напитки 8 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/52.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Напитки</p>
+              <h3 class="menu-item-name">Натуральный Сок пико 1 л</h3>
+              <p class="menu-item-description">
+                Фруктовый сок.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">22 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Напитки 9 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/53.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Напитки</p>
+              <h3 class="menu-item-name">Fanta 1 л</h3>
+              <p class="menu-item-description">
+                Газированный напиток.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">10 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Напитки 10 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/napitok_coca-cola_0_5_l_p_b_kazahstan.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Напитки</p>
+              <h3 class="menu-item-name">Coca Cola 0.5</h3>
+              <p class="menu-item-description">
+                Газированный напиток.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">6 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Напитки 11 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/cfdu41qvtie1t7675m8g.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Напитки</p>
+              <h3 class="menu-item-name">Тропик 0.5</h3>
+              <p class="menu-item-description">
+                Освежающий напиток. Сочный апельсин.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">7 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Соусы 1 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/sous2.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Соусы</p>
+              <h3 class="menu-item-name">Соус чесночный</h3>
+              <p class="menu-item-description">
+                Чесночный соус 35гр.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">2.5 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Соусы 2 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/sous3.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Соусы</p>
+              <h3 class="menu-item-name">Соус острый</h3>
+              <p class="menu-item-description">
+                Острый соус 35гр.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">2.5 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Соусы 3 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/sous4.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Соусы</p>
+              <h3 class="menu-item-name">Соус сырный</h3>
+              <p class="menu-item-description">
+                Сырный соус 35гр.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">2.5 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Другое 1 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/katlet.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Другое</p>
+              <h3 class="menu-item-name">Котлета из говядины 100гр</h3>
+              <p class="menu-item-description">
+                Котлета из говядины.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">12 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Другое 2 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/sir.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Другое</p>
+              <h3 class="menu-item-name">Сыр плавленый 1шт</h3>
+              <p class="menu-item-description">
+                Плавленый сыр.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">3 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Другое 3 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/chili.webp')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Другое</p>
+              <h3 class="menu-item-name">Перец халапеньо 15гр</h3>
+              <p class="menu-item-description">
+                Острый маринованный перец халапеньо.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">0.5 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Другое 4 -->
+          <div class="menu-item">
+            <div class="menu-item-img" style="background-image: url('images/27.jpg')"></div>
+            <div class="menu-item-content">
+              <p class="menu-item-category">Другое</p>
+              <h3 class="menu-item-name">Булочка</h3>
+              <p class="menu-item-description">
+                Свежая булочка для бургеров.
+              </p>
+              <div class="menu-item-bottom">
+                <div class="menu-item-price">2.5 TJS</div>
+                <div class="menu-item-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Доставка и оплата -->
+    <section class="special" id="special">
+        <div class="container special-container">
+            <div class="special-header">
+                <p class="special-subtitle">Доставка и оплата</p>
+                <h2 class="special-title">Как заказать и оплатить</h2>
+                <p class="special-description">
+                    Быстрая доставка в пределах Пенджикента и удобные способы оплаты для вашего комфорта.
+                </p>
+            </div>
+            <div class="special-grid">
+                <!-- Доставка -->
+                <div class="special-item">
+                    <div class="special-item-header">
+                        <div>
+                            <h3 class="special-item-title">Доставка</h3>
+                            <p class="special-item-subtitle">С 9:00 до 22:00</p>
+                        </div>
+                    </div>
+                    <div class="special-item-features">
+                        <div class="special-item-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Бесплатная доставка при заказе от 50 TJS</span>
+                        </div>
+                        <div class="special-item-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Доставка только в пределах Пенджикента</span>
+                        </div>
+                        <div class="special-item-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Заказы принимаются по телефону или через соцсети</span>
+                        </div>
+                        <div class="special-item-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Контакты для доставки: +992 928 082 552, +992 970 882 552</span>
+                        </div>
+                    </div>
+                    <div class="special-item-footer">
+                        <a href="#" class="btn btn-secondary order-delivery">Заказать доставку</a>
+                        <div class="special-item-badge">Быстро и удобно</div>
+                    </div>
+                </div>
+                <!-- Способы оплаты и техподдержка -->
+                <div class="special-item">
+                    <div class="special-item-header">
+                        <div>
+                            <h3 class="special-item-title">Оплата и техподдержка</h3>
+                            <p class="special-item-subtitle">Удобные способы оплаты</p>
+                        </div>
+                    </div>
+                    <div class="special-item-features">
+                        <div class="special-item-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Оплата через Алиф</span>
+                        </div>
+                        <div class="special-item-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Оплата через Душанбе Сити</span>
+                        </div>
+                        <div class="special-item-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Оплата наличными при получении</span>
+                        </div>
+                        <div class="special-item-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Техподдержка: WhatsApp +7 (995) 945 1968</span>
+                        </div>
+                    </div>
+                    <div class="special-item-footer">
+                        <a href="#" class="btn btn-secondary">Связаться с поддержкой</a>
+                        <div class="special-item-badge">Всегда на связи</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonial-header">
+                <p class="testimonial-subtitle">Отзывы</p>
+                <h2 class="testimonial-title">Что говорят наши гости</h2>
+                <p class="testimonial-description">
+                    Мы гордимся тем, что предлагаем вкусные блюда и отличный сервис.
+                </p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-content">
+                        Кафе SaFar – это находка! Бургеры невероятно вкусные, а доставка всегда вовремя. Рекомендую всем!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-img"></div>
+                        <div>
+                            <h4 class="testimonial-author-name">Алишер</h4>
+                            <p class="testimonial-author-title">Постоянный клиент</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Заказ -->
+    <section class="order">
+        <div class="container">
+            <h2 class="order-title">Готовы попробовать вкусный фастфуд?</h2>
+            <p class="order-text">
+                Закажите онлайн с доставкой или самовывозом и наслаждайтесь нашими блюдами дома или в офисе.
+            </p>
+            <a href="#" class="order-btn">Заказать</a>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo">SaFar</a>
+                    <p class="footer-text">
+                        Кафе SaFar – это вкусный фастфуд с местными ингредиентами и быстрой доставкой в Пенджикенте.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/cafe_safar" class="footer-social-link"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a href="https://t.me/+992970882552" class="footer-social-link"
+                            ><i class="fab fa-telegram"></i
+                        ></a>
+                        <a href="https://wa.me/+79959451968" class="footer-social-link"
+                            ><i class="fab fa-whatsapp"></i
+                        ></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Быстрые ссылки</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link">
+                            <a href="#home"><i class="fas fa-chevron-right"></i> Главная</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#about"><i class="fas fa-chevron-right"></i> О нас</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#menu"><i class="fas fa-chevron-right"></i> Меню</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#special"><i class="fas fa-chevron-right"></i> Доставка и оплата</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#testimonials"><i class="fas fa-chevron-right"></i> Отзывы</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Часы работы</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link">
+                            <a href="#">Кафе: 08:00 - 23:00</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Доставка: 09:00 - 22:00</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Контакты</h3>
+                    <div class="footer-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            Проспект Рудаки 112, Пенджикент, Таджикистан
+                        </div>
+                    </div>
+                    <div class="footer-info">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>+992 928 08 2552</div>
+                    </div>
+                    <div class="footer-info">
+                        <i class="fab fa-whatsapp"></i>
+                        <div> +7 (995) 945 1968 (Техподдержка)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2025 Кафе SaFar. Все права защищены. |  Разработка <a href="https://t.me/xalilov_uc">Sino IT </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+            <!-- Модальное окно корзины -->
+<div id="cartModal" class="cart-modal">
+  <div class="cart-modal-content">
+    <div class="cart-header">
+      <h3>Ваша корзина</h3>
+      <span class="close-modal">&times;</span>
+    </div>
+    <div class="cart-body">
+      <div id="cartItems" class="cart-items">
+        <!-- Товары будут добавляться сюда -->
+      </div>
+      <div class="cart-total">
+        <span>Итого:</span>
+        <span id="cartTotalPrice">0 TJS</span>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label for="name">Ваше имя</label>
+          <input type="text" placeholder="напишите свое имя" id="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Телефон</label>
+          <div class="phone-input">
+            <div class="flag-container">
+              <img src="https://flagcdn.com/w20/tj.png" class="flag" alt="Таджикистан">
+              <span>+992</span>
+            </div>
+            <input type="tel" id="phone" pattern="[0-9]{9}" title="9 цифр без +992" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Тип заказа</label>
+          <div class="order-type-buttons">
+            <button type="button" class="order-type-btn active" data-type="delivery">Доставка</button>
+            <button type="button" class="order-type-btn" data-type="pickup">Самовывоз</button>
+          </div>
+        </div>
+        
+        <div class="form-group" id="addressGroup">
+          <label for="address">Адрес доставки</label>
+          <input type="text" placeholder="напишите свой адрес" id="address">
+        </div>
+        
+        <div class="form-group" id="pickupGroup" style="display: none;">
+          <label for="pickupLocation">Место самовывоза</label>
+          <select id="pickupLocation">
+            <option value="Проспект Рудаки 112">Болои дедсати сказка</option>
+            <option value="Другой адрес">Пеши мактаби 15</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Способ оплаты</label>
+          <div class="payment-methods">
+            <div class="payment-method active" data-method="cash">
+              <i class="fas fa-money-bill-wave"></i>
+              <span>Наличные</span>
+            </div>
+            <div class="payment-method" data-method="ds">
+              <i class="fas fa-mobile-alt"></i>
+              <span>Душанбе Сити</span>
+            </div>
+            <div class="payment-method" data-method="alif">
+              <i class="fas fa-wallet"></i>
+              <span>Алиф</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="comments">Комментарий к заказу</label>
+          <textarea id="comments" placeholder="напишите комментари по поводу заказа(можете пропустить!)" rows="3"></textarea>
+        </div>
+        
+        <div class="order-summary">
+          <div class="order-total">
+            <span>К оплате:</span>
+            <span id="orderTotal">0 TJS</span>
+          </div>
+          <button type="submit" class="submit-order-btn" id="submitOrder" disabled>
+            Оформить заказ
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Уведомления (тосты) -->
+<div id="toastContainer" class="toast-container"></div>
+
+
+
+    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно профиля -->
+<div id="profileModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3>Ваш профиль</h3>
+    <div id="profileInfo">
+      <p><strong>Логин:</strong> <span id="profileUsername"></span></p>
+      <p><strong>Телефон:</strong> <span id="profilePhone"></span></p>
+      <p><strong>Пароль:</strong> ********</p>
+      
+      <button id="changePasswordBtn">Изменить пароль</button>
+      
+      <div id="passwordChangeForm" style="display: none; margin-top: 20px;">
+        <input type="password" id="newPassword" placeholder="Новый пароль">
+        <input type="password" id="confirmPassword" placeholder="Подтвердите пароль">
+        <button id="savePasswordBtn">Сохранить</button>
+      </div>
+      
+      <h4>История заказов</h4>
+      <div id="orderHistory">
+        <p>У вас пока нет заказов</p>
+      </div>
+    </div>
+  </div>
+</div>
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>

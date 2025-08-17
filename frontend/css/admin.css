@@ -1,0 +1,406 @@
+:root {
+    --primary: #9d2e33;
+    --primary-dark: #7a1f24;
+    --secondary: #d4a96a;
+    --dark: #1d1d1d;
+    --light-gray: #f5f5f5;
+    --white: #ffffff;
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --warning: #f39c12;
+    --info: #3498db;
+}
+
+/* ================== БАЗА ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f5f5, #ececec);
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ================== ХЕДЕР ================== */
+.admin-header {
+    background: linear-gradient(90deg, var(--dark), var(--primary-dark));
+    color: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.admin-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: glow 3s infinite alternate;
+}
+
+.admin-header h1 span {
+    color: var(--secondary);
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px var(--secondary); }
+    to { text-shadow: 0 0 20px var(--secondary), 0 0 40px var(--secondary); }
+}
+
+.admin-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.admin-header nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.admin-header nav a.active,
+.admin-header nav a:hover {
+    background: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+}
+
+/* ================== ОСНОВНОЙ КОНТЕНТ ================== */
+.admin-main {
+    padding: 40px 0;
+    background: var(--light-gray);
+    min-height: calc(100vh - 60px);
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.admin-section {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 35px;
+    transition: all 0.3s;
+}
+
+.admin-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ================== КНОПКИ ================== */
+.btn {
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.btn-secondary {
+    background: #bdc3c7;
+    color: var(--dark);
+}
+
+.btn-secondary:hover {
+    background: #95a5a6;
+    box-shadow: 0 0 15px #7f8c8d;
+}
+
+.btn-edit {
+    background: var(--info);
+    color: var(--white);
+}
+
+.btn-edit:hover {
+    background: #2980b9;
+    box-shadow: 0 0 12px var(--info);
+}
+
+.btn-delete {
+    background: var(--danger);
+    color: var(--white);
+}
+
+.btn-delete:hover {
+    background: #c0392b;
+    box-shadow: 0 0 12px var(--danger);
+}
+
+/* ================== ТОВАРЫ ================== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    animation: fadeUp 0.7s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* ================== БАДЖИ ================== */
+.availability-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    animation: pulse 2s infinite;
+}
+
+.available {
+    background: var(--success);
+    color: white;
+}
+
+.unavailable {
+    background: var(--danger);
+    color: white;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0.3); }
+    50% { transform: scale(1.1); box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0.3); }
+}
+
+/* ================== ТАБЛИЦЫ ================== */
+.orders-table table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.orders-table th, .orders-table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.orders-table th {
+    background: #f9f9f9;
+    font-weight: 600;
+}
+
+.orders-table tr {
+    transition: all 0.3s;
+}
+
+.orders-table tr:hover {
+    background: rgba(157, 46, 51, 0.05);
+    transform: scale(1.01);
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-new { background: var(--info); color: white; }
+.status-processing { background: var(--warning); color: white; }
+.status-completed { background: var(--success); color: white; }
+.status-cancelled { background: var(--danger); color: white; }
+
+/* ================== МОДАЛКА ================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.4s;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    position: relative;
+    animation: zoomIn 0.4s;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #777;
+    transition: all 0.3s;
+}
+
+.close-modal:hover {
+    color: var(--danger);
+    transform: rotate(90deg);
+}
+
+/* ================== ФОРМЫ ================== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus, 
+.form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(157, 46, 51, 0.3);
+    outline: none;
+}
+
+/* ================== ЗАГРУЗКА ================== */
+.loading-spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ================== УВЕДОМЛЕНИЯ ================== */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: -400px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    z-index: 2100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.6s ease;
+    font-weight: 600;
+}
+
+.notification.show {
+    right: 20px;
+}
+
+.notification.success { background: var(--success); }
+.notification.error { background: var(--danger); }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Регистрация</title>
+  <link rel="stylesheet" href="/css/auth.css">
+  <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Регистрация</h2>
+
+   <form id="registerForm">
+      <!-- Логин -->
+      <div class="form-group">
+        <input id="login" name="login" type="text" required placeholder=" " minlength="3" />
+        <label for="login">Логин</label>
+        <i class="fa-solid fa-user"></i>
+      </div>
+
+      <!-- Телефон -->
+      <div class="form-group">
+        <input id="r-phone" name="phone" type="tel" inputmode="tel" required placeholder=" " pattern="[0-9+()\-\s]{5,}" />
+        <label for="r-phone">Номер телефона</label>
+        <i class="fa-solid fa-phone"></i>
+      </div>
+
+      <!-- Пароль -->
+      <div class="form-group">
+        <input id="r-password" name="password" type="password" required placeholder=" " minlength="6" />
+        <label for="r-password">Пароль</label>
+        <i id="togglePassword1" class="fa-solid fa-eye" style="cursor: pointer;"></i>
+      </div>
+
+      <!-- Подтверждение пароля -->
+      <div class="form-group">
+        <input id="r-password2" name="password_confirm" type="password" required placeholder=" " minlength="6" />
+        <label for="r-password2">Подтверждение пароля</label>
+        <i id="togglePassword2" class="fa-solid fa-eye" style="cursor: pointer;"></i>
+      </div>
+
+      <button id="btn" type="submit">Зарегистрироваться</button>
+
+      <p>Уже есть аккаунт? <a class="link" href="login.html">Войти</a></p>
+    </form>
+  </div>
+
+  <script>
+    // Проверка совпадения паролей
+    const form = document.getElementById('registerForm');
+    form.addEventListener('submit', function (e) {
+      const p1 = document.getElementById('r-password');
+      const p2 = document.getElementById('r-password2');
+      if (p1.value !== p2.value) {
+        e.preventDefault();
+        p2.setCustomValidity('Пароли не совпадают');
+        p2.reportValidity();
+        return false;
+      } else {
+        p2.setCustomValidity('');
+      }
+    });
+
+    // Показать/скрыть пароль (оба поля)
+    function togglePassword(inputId, iconId) {
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
+      icon.addEventListener('click', function () {
+        const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+        input.setAttribute('type', type);
+        this.classList.toggle('fa-eye');
+        this.classList.toggle('fa-eye-slash');
+      });
+    }
+
+    togglePassword('r-password', 'togglePassword1');
+    togglePassword('r-password2', 'togglePassword2');
+
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const username = document.getElementById('login').value;
+    const phone = document.getElementById('r-phone').value;
+    const password = document.getElementById('r-password').value;
+    const confirmPassword = document.getElementById('r-password2').value;
+    
+    if (password !== confirmPassword) {
+      alert('Пароли не совпадают');
+      return;
+    }
+    
+    fetch('/api/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: username,
+        phone: phone,
+        password: password
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert('Регистрация прошла успешно!');
+        window.location.href = '/login.html';
+      } else {
+        alert('Ошибка: ' + data.message);
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Произошла ошибка при регистрации');
+    });
+  });
+
+
+
+  </script>
+</body>
+</html>
